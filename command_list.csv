@@ -1,0 +1,25 @@
+    1  history -p
+    2  ls
+    3  cd Documents
+    4  cd HW
+    5  git clone https://github.com/armensarkisyan/HW_10.git
+    6  cd HW_10
+    7  touch text_ignore.txt
+    8  echo "text_ignore.txt" >> .gitignore
+    9  git status
+   10  git add .
+   11  git commit -m "Создал файл text_ignore.txt; Добавил строку в .gitignore"
+   12  touch main_test.txt
+   13  git add .
+   14  git commit -m "Создал файл main_test.txt"
+   15  git checkout -b develop
+   16  touch develop_test.txt
+   17  git add .
+   18  git commit -m "Создал файл develop_test.txt"
+   19  echo "just a small change" >> develop_test.txt
+   20  git status
+   21  git add .
+   22  git commit -m "Добавил строку в develop_test.txt"
+   23  git checkout main
+   24  git merge develop
+   25  git log --oneline
